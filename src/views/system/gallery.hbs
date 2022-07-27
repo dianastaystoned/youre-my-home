@@ -1,0 +1,85 @@
+<div class="wrapper">
+      <nav>
+        <div class="items">
+          <span class="item active" data-filter="all">All</span>
+          <span class="item" data-filter="draw">Draws</span>
+          <span class="item" data-filter="yours">Yours</span>
+          <span class="item" data-filter="messages">Messages</span>
+          <span class="item" data-filter="ours">Ours</span>
+        </div>
+      </nav>
+    </div>
+    <div class="containerr">
+      {{#each pics}}
+      <div class="product {{category}}">
+        <div class="product-card">
+          <h2 class="name">{{caption}}</h2>
+          <span class="price"></span>
+          <img src="{{pic}}" class="product-img" alt="bag">
+        </div>
+        <div class="popup-view">
+          <div class="popup-card">
+            <a><i class="ri-close-line close-btn"></i></a>
+            <div class="product-img">
+              <img src="{{pic}}" alt="">
+            </div>
+            <div class="info">
+              <h2>{{caption}}<br><span>{{category}}</span></h2>
+              <p>{{description}}</p>
+              <span class="price"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="shadow"></div>
+
+    <script type="text/javascript">
+    var popupViews = document.querySelectorAll('.popup-view');
+    var popupBtns = document.querySelectorAll('.product-card');
+    var closeBtns = document.querySelectorAll('.close-btn');
+
+    //javascript for quick view button
+    var popup = function(popupClick){
+      popupViews[popupClick].classList.add('active');
+    }
+
+    popupBtns.forEach((popupBtn, i) => {
+      popupBtn.addEventListener("click", () => {
+        popup(i);
+      });
+    });
+
+    //javascript for close button
+    closeBtns.forEach((closeBtn) => {
+      closeBtn.addEventListener("click", () => {
+        popupViews.forEach((popupView) => {
+          popupView.classList.remove('active');
+        });
+      });
+    });
+
+    const filterContainer = document.querySelector(".items"),
+    galeryItems = document.querySelectorAll(".product")
+
+    filterContainer.addEventListener("click", (event) =>{
+    if (event.target.classList.contains("item")) {
+        filterContainer.querySelector(".active").classList.remove("active");
+        event.target.classList.add("active");
+        const filterValue = event.target.getAttribute("data-filter");
+        galeryItems.forEach((item) => {
+        if (item.classList.contains(filterValue) || filterValue === 'all') {
+            item.classList.remove("hide")
+            item.classList.add("show");
+        }
+        else{
+            item.classList.remove("show");
+            item.classList.add("hide")
+            console.log(filterValue)
+        }
+        })
+    }
+    })
+    </script>
+

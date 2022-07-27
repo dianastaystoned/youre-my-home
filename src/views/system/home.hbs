@@ -1,0 +1,321 @@
+<main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="https://datosdiana.blob.core.windows.net/youremyhome/3side.png" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            My love will make <br> your life better
+                        </h1>
+                        <p class="home__description">
+                            People destined to meet will do so apparently by chance at precisely the right moment.
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            Let's start <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/DianaIdkk" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dianaidk.__" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="https://datosdiana.blob.core.windows.net/youremyhome/4.png" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Who we really are & <br> why choose us
+                        </h2>
+
+                        <p class="about__description">
+                            We have over 4+ years of experience givin you the most of our love and time, we can try to do the best things to make you happy :). 
+                            We always love you and we will try to do the best for you and your well-being, the only good thing in this world for us is you.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                I always will love you.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                I give you gifts, attention and all the love that you can dream.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                I really care for you and how you feel.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                100% love, kisses and hugs guaranteed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Things why I think <br> you are my home
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Safe</h3>
+                            <p class="steps__card-description">
+                                When your arms are around me i feel safe and comfortable. I can't even think in anything else, just about you, how happy and accelerated you heart sound when I lay my head on your chest and you aroma taking me to another reality. I can't lie to you about how much peace and quiet you give me every time you're near me.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Your eyes</h3>
+                            <p class="steps__card-description">
+                                The first time I look in your eyes I feel the luckiest person in the world cause you are the most wonderful and beautiful person that I have know, since I have never loved someone like this, you are the most beautiful feeling I have. I love looking at myself in your honey-colored eyes, they hypnotize me and make me want to see them always
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">Feel blessed</h3>
+                            <p class="steps__card-description">
+                                Everytime I see you laught at one of my silly jokes you make me want to think of a thousand more just to see you smile, you make me feel blessed to be able to be with you at that moment. I love to see you smile, but above all, I love to make you laugh, because your little face is filled with light and happiness that makes me feel in heaven.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="gallery">
+                <h2 class="section__title-center">
+                    Check out our <br> photos
+                </h2>
+
+                <p class="product__description">
+                    Here are some selected photos from our gallery, all are in excellent 
+                    quality and has a lot of love. Enjoy the best pics.
+                </p>
+
+                <div class="product__container grid">
+                    {{#each pics}}
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="{{pic}}" alt="" class="product__img">
+
+                        <h3 class="product__title" style="text-transform: uppercase;">{{caption}}</h3>
+                        <span class="product__price">{{description}}</span>
+
+                        <a href="/gallery" class="button--flex product__button"><i class="ri-gallery-line"></i></a>
+                    </article>
+                    {{/each}}
+                </div>
+            </section>
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why you are in love with me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    There are many things for which I love you, but I think one of the most notable is that you are a wonderful person, always so kind to everyone or most, how you care about the people you love and how beautiful you are to love. .
+                                    I love your sense of humor, because you are always so funny and we laugh at the same stupid things, I like how intelligent you are and how you use your intelligence for some things, I love you because it is you, because you have so many things that I would not even know how explain, I realized that I love you because just with a message you make me smile, because just by looking at you you take my breath away.
+                                    I love you like never in my life I think I'll love someone.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    When did you know you loved me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    There is no exact date for that, I think I just realized that you
+                                    I loved when your messages made me smile, when the photos of your face caused me
+                                    such a beautiful feeling in me, when the simple fact of listening to you made me happy
+                                    day. I think I realized that I'm in love with you when I started counting the
+                                    days and hours to be able to see you again, when I preferred to inconvenience others and feel
+                                    uncomfortable at times just to spend moments with you, when he agrees to go meet
+                                    your family, when I began to worry about such everyday things as if you were
+                                    with cold or heat, if you felt well or if you had already eaten, how you felt.
+                                    I began to be interested in your likes, your problems, your things from the past and the plans
+                                    What do you have in the future?
+                                    I realized that I started to love you when I cared about you so much that your problems
+                                    They became mine and I thought all day to be able to solve them.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What do you like most about me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    There are so many things that I like about you, I could even say that I like everything
+                                    and I don't think there is anything in particular that I like the most, but if I have to choose between everything you have I think I choose your personality, I love how you are and how you treat people, how you treat your family and friends,
+                                    I really like the way you think about yourself and other people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why did you choose me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Because with you everything is very different, how you make me feel, in such a way special that I feel unique, as if I were the prettiest girl in the entire universe.
+                                    Kevin, for me you are that light among so much darkness, you were all that I like and that I didn't even know what I was looking for. I chose you because I love the person who I am when you are by my side and I want to improve every day so that I can be by your side.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do you know that you loved me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    I realized that I loved you when with a simple message you made my day, when
+                                    I spent hours waiting to see you through a screen, when it started to matter too much to have time and accommodate everything I have to do to listen to you although
+                                    It was a couple of minutes, so I could help you and your dad would stop getting mad at you.
+                                    I realized that I loved you because I counted every day and missing hour to be by your side, when I cried with happiness for only being able to see you through a screen after a long time time without doing it, when it hurt me not being able to talk to you and not being able to see you because you had left without a cell phone
+                                    I understood that I loved you when I began to care more about your happiness than mine.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What is your favorite memory with me?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    I have a lot of good memories with you, but I think for now my favorite memory
+                                    with you at the moment is when we were in San Antonio, it was about 6 in the afternoon, that day we had eaten together, my aunt Lupe had told me to invite you to eat, after that we went out to eat sweets in the street and watch the sunset, we were sitting on the bench that has
+                                    a surname in the part where the back is placed, I was lying on your legs
+                                    While you were explaining to me why you believed that the sky is blue and the clouds are white, we saw that
+                                    day as the sky turned five different colors, on the side that goes towards Tlacuitapa it was purple with pink, towards the river the color was yellow with blue and on the side that goes to the Union
+                                    it was just almost black, I never thought we were going to see something so beautiful, that day we talked about so many
+                                    things from our childhood and how life has treated us, I learned that you were a different child than I believed, your feelings so beautiful and so sensitive, such a cute child.
+                                    I learned that you are the most wonderful person I have ever met and that I will surely meet in what remains of my life. That day we kissed so much that I ended up with swollen lips, yes that day
+                                    you would have told me to run away together I would not have even thought about it, I just wanted to fall asleep in
+                                    your arms and wake up next to you, just like now and like every night since that day.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Reach out to us today <br> via any of the given <br> information
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    dtr.3838@gmail.com
+                                </span>
+                            </div>
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by Instagram</h3>
+                                <span class="contact__description">
+                                    <i class="ri-instagram-line"></i>
+                                    @dianaidk.__
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="/send-email" method="POST" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input" name="fullname" required >
+                                <label for="" class="contact__label">Full name</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="email" placeholder=" " class="contact__input" name="email" required>
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input" name="subject" required>
+                                <label for="" class="contact__label">subject</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" placeholder=" " class="contact__input" name="message" required></textarea>                              
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>

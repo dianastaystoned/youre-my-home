@@ -1,0 +1,401 @@
+  <div class="bodys">
+    <div class="wrappers">
+      <div class="top-bar">
+        <i class="material-icons">expand_more</i>
+        <span></span>
+        <i class="material-icons">more_horiz</i>
+      </div>
+      <div class="img-area">
+        <img src="" alt="">
+      </div>
+      <div class="song-details">
+        <p class="name"></p>
+        <p class="artist"></p>
+      </div>
+      <div class="progress-area">
+        <div class="progress-bar">
+          <audio id="main-audio" src=""></audio>
+        </div>
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
+      </div>
+      <div class="controls">
+        <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+        <i id="prev" class="material-icons">skip_previous</i>
+        <div class="play-pause">
+          <i class="material-icons play">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons">skip_next</i>
+        <i id="more-music" class="material-icons">queue_music</i>
+      </div>
+      <div class="music-list">
+      <div class="header">
+        <div class="row">
+          
+        </div>
+      </div>
+      <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        <i id="close" class="material-icons">close</i>
+
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allMusic = [
+    {
+        name: "Abecedario",
+        artist: "Maca & Gero",
+        img: "abecedario",
+        src: "abecedario"
+    },
+    {
+        name: "Abrazado a Ti",
+        artist: "Kevin Kaarl",
+        img: "abrazado_a_ti",
+        src: "abrazado_a_ti"
+    },
+    {
+        name: "Acuerdate de Mi",
+        artist: "Morat",
+        img: "acuerdate_de_mi",
+        src: "acuerdate_de_mi"
+    },
+    {
+        name: "Acurrucar",
+        artist: "Ed Maverick",
+        img: "acurrucar",
+        src: "acurrucar"
+    },
+    {
+        name: "Antología",
+        artist: "Shakira",
+        img: "antologia",
+        src: "antologia"
+    },
+    {
+        name: "Aprender a Quererte",
+        artist: "Morat",
+        img: "aprender_a_quererte",
+        src: "aprender_a_quererte"
+    },
+    {
+        name: "Besame",
+        artist: "Camila",
+        img: "besame",
+        src: "besame"
+    },
+    {
+        name: "Can't Help Fallin In Love",
+        artist: "Twenty One Pilots",
+        img: "cant_help_fallin_in_love",
+        src: "cant_help_fallin_in_love"
+    },
+    {
+        name: "Causa Perdida",
+        artist: "Morat",
+        img: "causa_perdida",
+        src: "causa_perdida"
+    },
+    {
+        name: "Cristina",
+        artist: "Sebastian Yatra",
+        img: "cristina",
+        src: "cristina"
+    },
+    {
+        name: "Dandelions",
+        artist: "Ruth B",
+        img: "dandelions",
+        src: "dandelions"
+    },
+    {
+        name: "De Que Me Sirve La Vida",
+        artist: "Camila",
+        img: "de_que_me_sirve_la_vida",
+        src: "de_que_me_sirve_la_vida"
+    },
+    {
+        name: "Del Rio",
+        artist: "Ed Maverick",
+        img: "del_rio",
+        src: "del_rio"
+    },
+    {
+        name: "die first",
+        artist: "Nessa Barret",
+        img: "die_first",
+        src: "die_first"
+    },
+    {
+        name: "Die Trying",
+        artist: "Michl",
+        img: "die_trying",
+        src: "die_trying"
+    },
+    {
+        name: "Eres Mi Religión",
+        artist: "Maná & Joy",
+        img: "eres_mi_religion",
+        src: "eres_mi_religion"
+    },
+    {
+        name: "Eres Mía",
+        artist: "Aventura",
+        img: "eres_mia",
+        src: "eres_mia"
+    },
+    {
+        name: "Fallin All In You",
+        artist: "Shawn Mendes",
+        img: "fallin_all_in_you",
+        src: "fallin_all_in_you"
+    },
+    {
+        name: "Flicker",
+        artist: "Niall Horan",
+        img: "flicker",
+        src: "flicker"
+    },
+    {
+        name: "Ghost Of You",
+        artist: "5 Seconds Of Summer",
+        img: "ghost_of_you",
+        src: "ghost_of_you"
+    },
+    {
+        name: "Half a Heart",
+        artist: "One Direction",
+        img: "half_a_heart",
+        src: "half_a_heart"
+    },
+    {
+        name: "Home",
+        artist: "Edith Wiskers",
+        img: "home",
+        src: "home"
+    },
+    {
+        name: "I Want To Write You A Song",
+        artist: "One Direction",
+        img: "i_want_to_write_you_a_song",
+        src: "i_want_to_write_you_a_song"
+    },
+    {
+        name: "If I Could Fly",
+        artist: "One Direction",
+        img: "if_i_could_fly",
+        src: "if_i_could_fly"
+    },
+    {
+        name: "Irresistible",
+        artist: "One Direction",
+        img: "irresistible",
+        src: "irresistible"
+    },
+    {
+        name: "Llamada Perdida",
+        artist: "Morat",
+        img: "llamada_perdida",
+        src: "llamada_perdida"
+    },
+    {
+        name: "Lover Of Mine",
+        artist: "5 Seconds Of Summer",
+        img: "lover_of_mine",
+        src: "lover_of_mine"
+    },
+    {
+        name: "Mi Nuevo Vicio",
+        artist: "Morat",
+        img: "mi_nuevo_vicio",
+        src: "mi_nuevo_vicio"
+    },
+    {
+        name: "Mi Suerte",
+        artist: "Morat",
+        img: "mi_suerte",
+        src: "mi_suerte"
+    },
+    {
+        name: "Mi Vida Entera",
+        artist: "Morat",
+        img: "mi_vida_entera",
+        src: "mi_vida_entera"
+    },
+    {
+        name: "My Favorite Part (Ariana Grande)",
+        artist: "Mac Miller",
+        img: "my_favorite_part",
+        src: "my_favorite_part"
+    },
+    {
+        name: "Nadie Va a Pensar En Ti Mejor Que Yo",
+        artist: "Ed Maverick",
+        img: "nadie_va_a_pensar_en_ti_mejor_que_yo",
+        src: "nadie_va_a_pensar_en_ti_mejor_que_yo"
+    },
+    {
+        name: "No Se Va",
+        artist: "Morat",
+        img: "no_se_va",
+        src: "no_se_va"
+    },
+    {
+        name: "Nothing",
+        artist: "Bruno Major",
+        img: "nothing",
+        src: "nothing"
+    },
+    {
+        name: "Nunca Te Olvide",
+        artist: "Morat",
+        img: "nunca_te_olvide",
+        src: "nunca_te_olvide"
+    },
+    {
+        name: "Ojitos Lindos",
+        artist: "Bad Bunny",
+        img: "ojitos_lindos",
+        src: "ojitos_lindos"
+    },
+    {
+        name: "Over Again",
+        artist: "One Direction",
+        img: "over_again",
+        src: "over_again"
+    },
+    {
+        name: "Porfa No Te Vayas",
+        artist: "Beret & Morat",
+        img: "porfa_no_te_vayas",
+        src: "porfa_no_te_vayas"
+    },
+    {
+        name: "Pretty Boy",
+        artist: "The Neighbourhood",
+        img: "pretty_boy",
+        src: "pretty_boy"
+    },
+    {
+        name: "Primeras Veces",
+        artist: "Morat",
+        img: "primeras_veces",
+        src: "primeras_veces"
+    },
+    {
+        name: "Put a Little Love On Me",
+        artist: "Niall Horan",
+        img: "put_a_little_love_on_me",
+        src: "put_a_little_love_on_me"
+    },
+    {
+        name: "Romeo and Juliet",
+        artist: "Trippie Redd",
+        img: "romeo_and_juliet",
+        src: "romeo_and_juliet"
+    },
+    {
+        name: "Ropa de Bazar",
+        artist: "Ed Maverick",
+        img: "ropa_de_bazar",
+        src: "ropa_de_bazar"
+    },
+    {
+        name: "San Lucas",
+        artist: "Kevin Kaarl",
+        img: "san_lucas",
+        src: "san_lucas"
+    },
+    {
+        name: "Nothing",
+        artist: "Bruno Major",
+        img: "nothing",
+        src: "nothing"
+    },
+    {
+        name: "Satellite",
+        artist: "Harry Styles",
+        img: "satellite",
+        src: "satellite"
+    },
+    {
+        name: "Scary Love",
+        artist: "The Neighbourhood",
+        img: "scary_love",
+        src: "scary_love"
+    },
+    {
+        name: "Si Supieras",
+        artist: "Kevin Kaarl",
+        img: "si_supieras",
+        src: "si_supieras"
+    },
+    {
+        name: "Something Great",
+        artist: "One Direction",
+        img: "something_great",
+        src: "something_great"
+    },
+    {
+        name: "Still",
+        artist: "Niall Horan",
+        img: "still",
+        src: "still"
+    },
+    {
+        name: "Sweater Weather",
+        artist: "The Neighbourhood",
+        img: "sweater_weather",
+        src: "sweater_weather"
+    },
+    {
+        name: "This Is What Falling In Love Feels Like",
+        artist: "JVKE",
+        img: "this_is_what_falling_in_love_feels_like",
+        src: "this_is_what_falling_in_love_feels_like"
+    },
+    {
+        name: "Todavía Me Amas",
+        artist: "Aventura",
+        img: "todavia_me_amas",
+        src: "todavia_me_amas"
+    },
+    {
+        name: "Todo Cambio",
+        artist: "Camila",
+        img: "todo_cambio",
+        src: "todo_cambio"
+    },
+    {
+        name: "Truly, Madly, Deeply",
+        artist: "One Direction",
+        img: "truly_madly_deeply",
+        src: "truly_madly_deeply"
+    },
+    {
+        name: "Tu Canción",
+        artist: "Kevin Kaarl",
+        img: "tu_cancion",
+        src: "tu_cancion"
+    },
+    {
+        name: "Until I Found You",
+        artist: "Stephen Sanchez",
+        img: "untill_i_found_you",
+        src: "untill_i_found_you"
+    },
+    {
+        name: "What a Feeling",
+        artist: "One Direction",
+        img: "what_a_feeling",
+        src: "what_a_feeling"
+    },
+    ];
+  </script>
