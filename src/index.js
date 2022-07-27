@@ -77,7 +77,7 @@ app.get('/home', (req, res, next) => {
 
 //Server port config
 let port = 4000 || process.env.PORT
-const server = app.listen(port, ()=>{
+const server = app.listen(process.env.PORT, ()=>{
     console.log(`Listening on port ${port}`)
 })
 
