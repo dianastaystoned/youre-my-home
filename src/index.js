@@ -8,6 +8,7 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const {engine} = require('express-handlebars')
 require('./lib/passport')
+require('dotenv').config()
 const { database } = require('./config/keys')
 const mysqldump = require('mysqldump')
 
