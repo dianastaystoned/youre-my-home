@@ -9,6 +9,7 @@ const passport = require('passport')
 const {engine} = require('express-handlebars')
 require('./lib/passport')
 const { database } = require('./config/keys')
+const mysqldump = require('mysqldump')
 
 //initializations
 const app = express();
@@ -67,3 +68,16 @@ let port = 4000 || process.env.PORT
 const server = app.listen(port, ()=>{
     console.log(`Listening on port ${port}`)
 })
+
+var date = new Date();
+var now = date.toISOString().split('T')[0];
+var fileName= 'YoureMyHomeBackUp_' + now ;
+mysqldump({
+  connection: {
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'kydft',
+  },
+  dumpToFile: `./database/respaldo/${fileName}.sql`,
+});
