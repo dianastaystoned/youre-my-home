@@ -1,7 +1,2 @@
 /node_modules
-
-DB_HOST = 127.0.0.1
-DB_USER = root
-DB_PASS = Dianadestyles1$
-DB = kydft
-DB_PORT = 3306
+.env
