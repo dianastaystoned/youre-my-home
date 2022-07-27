@@ -63,7 +63,7 @@ app.use('/', require('./routes/auth.routes'))
 app.use(require('./routes/systemRoutes/admin.routes'))
 app.use(require('./routes/landinPage.routes'))
 
-app.get('/', (req, res, next) => {
+app.get('/home', (req, res, next) => {
 
   res.status(200).json({
       status: 'success',
