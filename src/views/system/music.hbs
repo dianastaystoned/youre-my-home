@@ -1,50 +1,46 @@
   <div class="bodys">
     <div class="wrappers">
-      <div class="top-bar">
-        <i class="material-icons">expand_more</i>
-        <span></span>
-        <i class="material-icons">more_horiz</i>
+    <div class="top-bar">
+      <i class="material-icons">expand_more</i>
+      <span>Now Playing</span>
+      <i class="material-icons">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
       </div>
-      <div class="img-area">
-        <img src="" alt="">
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
       </div>
-      <div class="song-details">
-        <p class="name"></p>
-        <p class="artist"></p>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
       </div>
-      <div class="progress-area">
-        <div class="progress-bar">
-          <audio id="main-audio" src=""></audio>
-        </div>
-        <div class="song-timer">
-          <span class="current-time">0:00</span>
-          <span class="max-duration">0:00</span>
-        </div>
-      </div>
-      <div class="controls">
-        <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
-        <i id="prev" class="material-icons">skip_previous</i>
-        <div class="play-pause">
-          <i class="material-icons play">play_arrow</i>
-        </div>
-        <i id="next" class="material-icons">skip_next</i>
-        <i id="more-music" class="material-icons">queue_music</i>
-      </div>
-      <div class="music-list">
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
       <div class="header">
         <div class="row">
-          
         </div>
       </div>
-      <i class= "list material-icons">queue_music</i>
-          <span>Music list</span>
-        <i id="close" class="material-icons">close</i>
-
+      <i id="close" class="material-icons">close</i>
       <ul>
         <!-- here li list are coming from js -->
       </ul>
-      </div>
     </div>
+  </div>
   </div>
 
   <script>
@@ -150,6 +146,24 @@
         artist: "Michl",
         img: "die_trying",
         src: "die_trying"
+    },
+    {
+        name: "El Perdedor",
+        artist: "Aventura",
+        img: "el_perdedor",
+        src: "el_perdedor"
+    },
+    {
+        name: "El Primer Día Sin Tí",
+        artist: "Danna Paola",
+        img: "el_primer_dia_sin_ti",
+        src: "el_primer_dia_sin_ti"
+    },
+    {
+        name: "Enseñame a Olvidar",
+        artist: "Aventura",
+        img: "enseñame_a_olvidar",
+        src: "enseñame_a_olvidar"
     },
     {
         name: "Eres Mi Religión",
@@ -326,6 +340,12 @@
         src: "put_a_little_love_on_me"
     },
     {
+        name: "Regresa a mi",
+        artist: "IL Divo",
+        img: "regresa_a_mi",
+        src: "regresa_a_mi"
+    },
+    {
         name: "Romeo and Juliet",
         artist: "Trippie Redd",
         img: "romeo_and_juliet",
@@ -344,10 +364,10 @@
         src: "san_lucas"
     },
     {
-        name: "Nothing",
-        artist: "Bruno Major",
-        img: "nothing",
-        src: "nothing"
+        name: "Salvame",
+        artist: "RBD",
+        img: "salvame",
+        src: "salvame"
     },
     {
         name: "Satellite",
@@ -404,6 +424,12 @@
         src: "this_is_what_falling_in_love_feels_like"
     },
     {
+        name: "te quiero tanto",
+        artist: "Kevin Kaarl",
+        img: "te_quiero_tanto",
+        src: "te_quiero_tanto"
+    },
+    {
         name: "Todavía Me Amas",
         artist: "Aventura",
         img: "todavia_me_amas",
@@ -426,6 +452,12 @@
         artist: "Kevin Kaarl",
         img: "tu_cancion",
         src: "tu_cancion"
+    },
+    {
+        name: "Un Millón de Primaveras",
+        artist: "Vicente Fernandez",
+        img: "un_millon_de_primaveras",
+        src: "un_millon_de_primaveras"
     },
     {
         name: "Until I Found You",

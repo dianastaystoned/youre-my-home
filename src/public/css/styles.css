@@ -504,7 +504,8 @@ the website, in dark theme
 
 .product__img{
   position: relative;
-  width: 120px;
+  width: 100%;
+  height: auto;
   justify-self: center;
   margin-bottom: var(--mb-0-75);
   transition: .3s;
@@ -519,6 +520,7 @@ the website, in dark theme
 
 .product__title{
   margin-bottom: .25rem;
+  margin-top: auto;
 }
 
 .product__button{
